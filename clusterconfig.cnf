@@ -1,0 +1,8 @@
+[AWSCREDENTIALS]
+aws_access_key_id=XXXXXXXXXXXXXXXXXXXX
+aws_secret_access_key=YYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+region_name=us-east-2
+[CLUSTERSPARK]
+client_network=0.0.0.0/0
+instance-type=m4.large
+number-slaves=2
