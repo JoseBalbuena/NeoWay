@@ -51,7 +51,7 @@ Esse script finaliza o Cluster EMR previamente criado. A sequencia é:
 O script irá gera um log no formato TerminateClusterEMRSpark.log.YYYYMMDD, é possivél debugar o script trocando de level=logging.INFO para level=logging.DEBUG.
 
 # CENARIO DE TESTE
-Para testar os scripts criei uma VM Ubuntu 18.04 EC2, já vem cm python 3.6, na conta proporcionada pela NeoWay. A chave é MAQUINATESTE.pem
+Para testar os scripts criar uma VM Ubuntu 18.04 EC2, aproveitando a conta da AWS, ela já vem cm python 3.6
 
 Instalando pip3 e boto3.
 ```sh
@@ -97,7 +97,7 @@ Inserir em cron, horarios 07, e 19hrs
 0 7 * * * /home/ubuntu/NeoWay/NeoWay-master/CreateClusterEMRSpark.py
 0 19 * * * /home/ubuntu/NeoWay/NeoWay-master/TerminateClusterEMRSpark.py
 ```
-Caso queira testar sem esperar a cron, os scripts podem ser executados manualmente, lenbrado que a saída irá ser armazenada no arquivo log.
+Caso queira testar sem esperar a cron, os scripts podem ser executados manualmente, lenbrado que a saída irá ser armazenada no arquivo log, para poder acompanhar precisa abrir outra sessão via terminal e enviar um tail -f arquivo_log.log.YYYYMMDD
 
 
 
