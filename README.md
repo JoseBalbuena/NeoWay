@@ -99,7 +99,45 @@ Inserir em cron, horarios 07, e 19hrs
 ```
 Caso queira testar sem esperar a cron, os scripts podem ser executados manualmente, lenbrado que a saída irá ser armazenada no arquivo log, para poder acompanhar precisa abrir outra sessão via terminal e enviar um tail -f arquivo_log.log.YYYYMMDD
 
-
-
-
-
+# LOG DE EXECUCAO
+Script de criação:
+```sh
+ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f CreateClusterEMRSpark.log.20181129 
+19:46:01,835 root INFO Parsing config file /home/ubuntu/NeoWay/NeoWay-master/clusterconfig.cnf 
+19:46:01,835 root INFO Creating key pair NEOWAY
+19:46:01,993 root INFO Saving key pair
+19:46:01,993 root INFO Changing Permission on NEOWAY.pem file
+19:46:01,993 root INFO Criando Security Group NEOWAY
+19:46:02,369 root INFO Criando Cluster EMR
+19:46:02,703 root INFO ClusterID: j-OKFWPEPYY21H , DateCreated: Thu, 29 Nov 2018 19:46:02 GMT , RequestId: 66f55100-f40f-11e8-acd8-a772f2c95706
+19:46:02,703 root INFO Writing Cluster Id in file /home/ubuntu/NeoWay/NeoWay-master/clusterid
+19:46:02,703 root INFO Waiting ...
+19:46:02,777 root INFO Waiting 300sec
+19:51:03,51 root INFO Waiting 300sec
+19:56:03,300 root INFO Waiting 300sec
+20:01:03,537 root INFO Cluster Started
+20:01:03,537 root INFO Jupyter NoteBook: http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:8888 (password:neoway)
+20:01:03,538 root INFO JupyterHUB http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:9443 (user:hadoop/pass:neoway)
+20:01:03,538 root INFO Ganglia Monitoring http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com
+20:01:03,538 root INFO Spark History Jobs http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:18080
+20:01:03,538 root INFO END
+```
+Script de terminação:
+```sh
+ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f TerminateClusterEMRSpark.log.20181129 
+20:11:01,813 root INFO ------------------------------------------------------------------------
+20:11:01,813 root INFO Start 20181129201101
+20:11:01,813 root INFO Script para criar cluster spark
+20:11:01,813 root INFO -----------------------------------------------------------------------------
+20:11:01,813 root INFO Parsing config file /home/ubuntu/NeoWay/NeoWay-master/clusterconfig.cnf 
+20:11:01,814 root INFO Terminating Cluster EMR
+20:11:01,842 root INFO Reading ClusterId from file /home/ubuntu/NeoWay/NeoWay-master/clusterid
+20:11:02,76 root INFO Waiting ...
+20:11:02,153 root INFO Waiting 300secs
+20:16:02,340 root INFO Cluster Terminated
+20:16:02,370 root INFO Deleting NEOWAY Security Group
+20:16:02,646 root INFO Deleting key pair NEOWAY
+20:16:02,708 root INFO Deleting key pair NEOWAY.pem
+20:16:02,708 root INFO Deleting ClusterId file
+20:16:02,708 root INFO END
+```
