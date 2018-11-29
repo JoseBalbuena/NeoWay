@@ -35,7 +35,8 @@ A sequencia do script é a seguinte:
 5. Espera terminar a criação, status "WAITING" e printa o endereço url do master, com as portas abertas indicando a qual aplicação pertence cada porta.
 6. Armazena o ClusterId no arquivo de texto clusterid.
 
-O script irá gera um log no formato CreateClusterEMRSpark.log.YYYYMMDD
+O script irá gera um log no formato CreateClusterEMRSpark.log.YYYYMMDD, é possivél debugar o script trocando de level=logging.INFO para level=logging.DEBUG.
+
 
 ## Script TerminateClusterEMRSpark.py
 Esse script finaliza o Cluster EMR previamente criado. A sequencia é:
@@ -47,7 +48,7 @@ Esse script finaliza o Cluster EMR previamente criado. A sequencia é:
 5. Quando o Cluster estar no status "TERMINATED", apaga a chave NEOWAY e o security group NEOWAY.
 6. Apaga o arquivo clusterid.
 
-O script irá gera um log no formato TerminateClusterEMRSpark.log.YYYYMMDD
+O script irá gera um log no formato TerminateClusterEMRSpark.log.YYYYMMDD, é possivél debugar o script trocando de level=logging.INFO para level=logging.DEBUG.
 
 # CENARIO DE TESTE
 Para testar os scripts criei uma VM Ubuntu 18.04 EC2, já vem cm python 3.6, na conta proporcionada pela NeoWay. A chave é MAQUINATESTE.pem
