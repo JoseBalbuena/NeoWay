@@ -9,7 +9,7 @@ A solucao utiliza as credenciais enviadas pela NeoWay na AWS.
 2. Python3.6
 3. Modulo python boto3 
 4. Bucket "jupyterneowaynotebooksentrevista" na regiao us-east2 (US Ohio), já criado na minha conta pessoal da AWS, aqui serao armazenados os "notebooks" do Jupyter. https://s3.console.aws.amazon.com/s3/buckets/jupyterneowaynotebooksentrevista/?region=sa-east-1&tab=overview
-5. Bootstrap script para instalação do Jupyter e JupyterHUB. Esse script irá instalar o Jupyter no cluster spark.Já criado na minha conta pessoal da AWS. https://s3.us-east-2.amazonaws.com/bootstrapjupyterneoway/bootstrap-jupyter.sh
+5. Bootstrap script para instalação do Jupyter e JupyterHUB. Esse script irá instalar o Jupyter e JupyterHUB no cluster spark.Já criado na minha conta pessoal da AWS. https://s3.us-east-2.amazonaws.com/bootstrapjupyterneoway/bootstrap-jupyter.sh
 
 ## Script CreateClusterEMRSpark.py
 O script lê o arquivo clusterconfig.cnf, onde existe a possibilidade de setar diferentes opcoes de configuracao, e cria um cluster EMR.
