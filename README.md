@@ -12,7 +12,7 @@ O script utiliza o bucket s3://neowayjose/logs/ da conta de teste da AWS proporc
 ```sh
 emrcluster = client.run_job_flow(
     Name='EMR Cluster with Boto',
-    ReleaseLabel='emr-5.3.0',
+    ReleaseLabel='emr-5.19.0',
     LogUri='s3://neowayjose/logs/',
 ```
 
