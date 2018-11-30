@@ -114,7 +114,7 @@ then
 
   sudo initctl reload-configuration
   #Update numpy
-  sudo pip uninstall --yes numpy
+  #sudo pip uninstall --yes numpy
   sudo pip install numpy
   # start jupyter daemon
   echo "Starting Jupyter Daemon"
