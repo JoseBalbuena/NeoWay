@@ -114,7 +114,8 @@ then
 
   sudo initctl reload-configuration
   #Update numpy
-  sudo pip install --upgrade numpy
+  sudo pip uninstall --yes numpy
+  sudo pip install numpy
   # start jupyter daemon
   echo "Starting Jupyter Daemon"
   sed -i 's/*/0.0.0.0/g' /mnt/home/hadoop/.jupyter/jupyter_notebook_config.py
