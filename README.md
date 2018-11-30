@@ -124,10 +124,10 @@ ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f CreateClusterEMRSpark.log
 ```
 O log mostra os endereços web do Jupyer, JupyterHUB, Ganglia e o Spark History
 
-Jupyter NoteBook: http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:8888 (password:neoway)
-JupyterHUB http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:9443 (user:hadoop/pass:neoway)
-Ganglia Monitoring http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com
-Spark History Jobs http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:18080
+1. Jupyter NoteBook: http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:8888 (password:neoway)
+2. JupyterHUB http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:9443 (user:hadoop/pass:neoway)
+3. Ganglia Monitoring http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com
+4. Spark History Jobs http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:18080
 
 Script de terminação:
 ```sh
