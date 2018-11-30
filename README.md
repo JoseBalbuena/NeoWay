@@ -158,6 +158,7 @@ Pagina Jupyter:
 
 Pagina JupyterHUB
 ![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-56-56.png)
+Testando um job no Cluster Spark para calcular Pi.
 ![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-56-45.png)
 
 Pagina Ganglia
