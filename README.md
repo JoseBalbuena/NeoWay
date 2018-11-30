@@ -1,4 +1,4 @@
-# SOLUCAO
+# SOLUÇÃO
 
 Para resolver o problema foram criados dois scripts python que utilizam a livraria python boto3, Esses dois scripts precisam ser agendados na cron de alguma máquina Linux. Os scripts basicamente criam e destroem um cluster EMR. O cluster EMR é instalado com Hadoop Spark e Ganglia para monitoramento.
 
@@ -50,7 +50,7 @@ Esse script finaliza o Cluster EMR previamente criado. A sequencia é:
 
 O script irá gera um log no formato TerminateClusterEMRSpark.log.YYYYMMDD, é possivél debugar o script trocando de level=logging.INFO para level=logging.DEBUG.
 
-# CENARIO DE TESTE
+# CENÁRIO DE TESTE
 Para testar os scripts criar uma VM Ubuntu 18.04 EC2, aproveitando a conta da AWS, ela já vem cm python 3.6
 
 Instalando pip3 e boto3.
@@ -99,7 +99,7 @@ Inserir em cron, horarios 07, e 19hrs
 ```
 Caso queira testar sem esperar a cron, os scripts podem ser executados manualmente, lenbrado que a saída irá ser armazenada no arquivo log, para poder acompanhar precisa abrir outra sessão via terminal e enviar um tail -f arquivo_log.log.YYYYMMDD
 
-# LOG DE EXECUCAO
+# LOG DE EXECUÇÃO
 Script de criação:
 ```sh
 ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f CreateClusterEMRSpark.log.20181129 
