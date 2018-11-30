@@ -111,7 +111,7 @@ client = boto3.client('emr',region_name=region,aws_access_key_id=key_id,aws_secr
 
 emrcluster = client.run_job_flow(
     Name='EMR Cluster with Boto',
-    ReleaseLabel='emr-5.3.0',
+    ReleaseLabel='emr-5.19.0',
     LogUri='s3://neowayjose/logs/',
     Instances={
         'InstanceGroups': [
