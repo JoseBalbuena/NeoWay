@@ -7,6 +7,23 @@ Para resolver o problema foram criados dois scripts python que utilizam a livrar
 4. O acesso multi-usuário é conseguido via JupyterHUB, usuário e Senha.
 5. O agendamento é feito via Crontab do Linux.
 
+O script utiliza o bucket s3://neowayjose/logs/ da conta de teste da AWS proporcionada pela NeoWay, favor não apagar até ter testado por completo lá se armazenan os logs do bootstrapping. Se de qualquer forma quiser deletar pode tirar a parte de LogUri do código do script CreateClusterEMRSpark.py
+
+```sh
+emrcluster = client.run_job_flow(
+    Name='EMR Cluster with Boto',
+    ReleaseLabel='emr-5.3.0',
+    LogUri='s3://neowayjose/logs/',
+```
+
+Para armazenamento dos notebooks utilizo minha conta de trial da AWS,não existe um motivo em particular para isso, elas são montadas via s3fs no master. "s3://jupyterneowaynotebooksentrevista/"
+
+Para armazenamento do script de bootstrap também utilizo minha conta de trial da AWS.
+s3://bootstrapjupyterneoway/bootstrap-jupyter.sh
+
+Para testar o Cluster, testar na região US East (Ohio) - us-east-2. Em teoria não deveria ter problemas em outra região, mas isso eu não cheguei a testar.
+
+
 A solucao utiliza as credenciais enviadas pela NeoWay na AWS.
 
 ## Pre-requisitos para execucao dos scripts
