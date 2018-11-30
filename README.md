@@ -116,10 +116,10 @@ ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f CreateClusterEMRSpark.log
 19:51:03,51 root INFO Waiting 300sec
 19:56:03,300 root INFO Waiting 300sec
 20:01:03,537 root INFO Cluster Started
-20:01:03,537 root INFO Jupyter NoteBook: http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:8888 (password:neoway)
-20:01:03,538 root INFO JupyterHUB http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:9443 (user:hadoop/pass:neoway)
-20:01:03,538 root INFO Ganglia Monitoring http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com
-20:01:03,538 root INFO Spark History Jobs http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:18080
+<span style="color:red">20:01:03,537 root INFO Jupyter NoteBook: http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:8888 (password:neoway)</span>
+<span style="color:red">20:01:03,538 root INFO JupyterHUB http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:9443 (user:hadoop/pass:neoway) </span>
+<span style="color:red">20:01:03,538 root INFO Ganglia Monitoring http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com</span>
+<span style="color:red">20:01:03,538 root INFO Spark History Jobs http://ec2-52-14-36-20.us-east-2.compute.amazonaws.com:18080</span>
 20:01:03,538 root INFO END
 ```
 Script de terminação:
