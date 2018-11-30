@@ -148,3 +148,5 @@ ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f TerminateClusterEMRSpark.
 20:16:02,708 root INFO Deleting ClusterId file
 20:16:02,708 root INFO END
 ```
+Pagina Juýter:
+/home/jose/Pictures/Screenshot from 2018-11-29 23-58-18.png
