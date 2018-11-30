@@ -1,6 +1,10 @@
 # SOLUÇÃO
 
 Para resolver o problema foram criados dois scripts python que utilizam a livraria python boto3, Esses dois scripts precisam ser agendados na cron de alguma máquina Linux. Os scripts basicamente criam e destroem um cluster EMR. O cluster EMR é instalado com Hadoop Spark e Ganglia para monitoramento.
+A alta disponibilidade é alcançada via um Cluster de 3 nós, 1 master e 2 slaves. Para full HA um cluster de ZooKeeper se faz necesário lamentavélmente a AWS EMR não permite esse tipo de configuração.
+A segurança é obtida por meio de um arquivo de configuração onde é setada a rede do cliente para acesso SSH, por default esta em 0.0.0.0/0.
+O monitoramento é feito via Ganglia, e Spark History.
+O acesso multi-usuário é conseguido via JupyterHUB.
 
 A solucao utiliza as credenciais enviadas pela NeoWay na AWS.
 
@@ -149,4 +153,14 @@ ubuntu@ip-172-31-21-20:~/NeoWay/NeoWay-master$ tail -f TerminateClusterEMRSpark.
 20:16:02,708 root INFO END
 ```
 Pagina Jupyter:
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-58-18.png)
+
+Pagina JupyterHUB
+![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-56-56.png)
+![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-56-45.png)
+
+Pagina Ganglia
+![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-57-26.png)
+
+Pagina Spark History
+![alt text](https://github.com/JoseBalbuena/Images/blob/master/Screenshot%20from%202018-11-29%2023-57-00.png)
